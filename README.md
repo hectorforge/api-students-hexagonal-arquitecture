@@ -96,33 +96,33 @@ Una vez que la aplicación esté corriendo, puedes usar herramientas como Postma
 El proyecto sigue una estructura inspirada en la Arquitectura Hexagonal, organizada de la siguiente manera:
 src
 └── main
-└── java
-└── com
-└── hex
-└── app
-├── application
-│   ├── ports
-│   │   ├── input  (Interfaces de entrada)
-│   │   └── output (Interfaces de salida)
-│   └── service    (Implementación de la lógica de negocio del dominio)
-├── domain         (Entidades de negocio y objetos de valor del dominio)
-└── infrastructure
-├── adapters
-│   ├── input.rest  (Adaptador para la API REST)
-│   │   ├── mapper
-│   │   ├── model
-│   │   │   ├── request (DTOs de entrada)
-│   │   │   └── response (DTOs de salida)
-│   │   └── StudentController
-│   └── output.persistence (Adaptador para la persistencia de datos)
-│       ├── entity       (Entidades JPA/Hibernate)
-│       ├── mapper       (Mappers entre dominio y entidad de persistencia)
-│       ├── repository   (Interfaces de Spring Data JPA)
-│       └── StudentPersistenceAdapter (Implementación del puerto de salida)
-└── config           (Configuraciones específicas de la aplicación y Spring)
-└── GlobalControllerAdvice (Manejo global de excepciones)
-└── AppHexagonalApplication (Clase principal de la aplicación Spring Boot)
-└── utils                 (Clases utilitarias como catálogos de errores, si aplica)
+    └── java
+        └── com
+            └── hex
+                └── app
+                    ├── application
+                    │   ├── ports
+                    │   │   ├── input               (Interfaces de entrada)
+                    │   │   └── output              (Interfaces de salida)
+                    │   └── service                (Implementación de la lógica de negocio del dominio)
+                    ├── domain                    (Entidades de negocio y objetos de valor del dominio)
+                    └── infrastructure
+                        ├── adapters
+                        │   ├── input.rest          (Adaptador para la API REST)
+                        │   │   ├── mapper
+                        │   │   ├── model
+                        │   │   │   ├── request     (DTOs de entrada)
+                        │   │   │   └── response    (DTOs de salida)
+                        │   │   └── StudentController
+                        └── output.persistence
+                            ├── entity               (Entidades JPA/Hibernate)
+                            ├── mapper               (Mappers entre dominio y entidad de persistencia)
+                            ├── repository           (Interfaces de Spring Data JPA)
+                            └── StudentPersistenceAdapter  (Implementación del puerto de salida)
+                        └── config                     (Configuraciones específicas de la aplicación, Spring y beans)
+                        └── GlobalControllerAdvice     (Manejo global de excepciones)
+                    └── AppHexagonalApplication    (Clase principal de la aplicación Spring Boot)
+                    └── utils                      (Clases utilitarias como catálogos de errores, si aplica)
 ```
 
 ## Contribuciones

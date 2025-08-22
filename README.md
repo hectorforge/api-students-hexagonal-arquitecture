@@ -92,7 +92,7 @@ Una vez que la aplicación esté corriendo, puedes usar herramientas como Postma
 ---
 
 ## Estructura del Proyecto
-
+```plaintext
 El proyecto sigue una estructura inspirada en la Arquitectura Hexagonal, organizada de la siguiente manera:
 src
 └── main
@@ -123,6 +123,7 @@ src
 └── GlobalControllerAdvice (Manejo global de excepciones)
 └── AppHexagonalApplication (Clase principal de la aplicación Spring Boot)
 └── utils                 (Clases utilitarias como catálogos de errores, si aplica)
+```
 
 ## Contribuciones
 
